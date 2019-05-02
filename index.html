@@ -1,15 +1,28 @@
-<!DOCTYPE html>
+<!doctype HTML>
 <html>
-<!-- include A-Frame obviously -->
-<script src="https://aframe.io/releases/0.6.0/aframe.min.js"></script>
-<!-- include ar.js for A-Frame -->
+<meta charset="UTF-8">
+<script src="https://aframe.io/releases/0.9.1/aframe.min.js"></script>
 <script src="https://jeromeetienne.github.io/AR.js/aframe/build/aframe-ar.js"></script>
+
 <body style='margin : 0px; overflow: hidden;'>
-<a-scene embedded arjs>
-    <a-text  value = "Bonjour le monde!" > </a-text>
-    <a-marker-camera type = "pattern" preset = 'AR.js'> </a-marqueur-camera>
+<a-scene embedded artoolkit="sourceType : webcam">
+
+    <a-marker preset="hiro">
+        <a-image position="0 3 0" src="mystere.png"></a-image>
+        <a-text position="0 2 0" wrap-count="40" value="Game enigme" color="#2a27ff" id="" visible=""></a-text>
+        <a-text position="-1 0 0" wrap-count="20" value="Afin de trouver notre point final, résolver les différentes énigmes qui vous aménerons petit à petit à vous dirigez jusqu'à l'enigme final" color="#2a27ff" id="" visible=""></a-text>
+    </a-marker>
+    <a-entity camera></a-entity>
 </a-scene>
+
+<a-scene embedded artoolkit="sourceType : webcam">
+
+    <a-marker preset="A">
+        <a-text position="0 2 0" width="4.00" wrap-count="40" value="Game enigme" color="#2a27ff" id="" visible=""></a-text>
+        <a-text position="-1 0 0" wrap-count="20" value="Afin de trouver notre point final, résolver les différentes énigmes qui vous aménerons petit à petit à vous dirigez jusqu'à l'enigme final" color="#2a27ff" id="" visible=""></a-text>
+    </a-marker>
+    <a-entity camera></a-entity>
+</a-scene>
+
 </body>
 </html>
-
-
